@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  -->
+<!--создаем бины  -->
+    <bean id="myAudi" class="org.example.cars.Audi"/>
+     <!-- опишем бин БМВ более развернуто -->
+         <bean id="myBMW" class="org.example.cars.BMW" scope="singleton">
+             <!-- скажем, что при создании об."myBMW" чтоб в него устанавливали об."mySony"
+             (работает через конструктор) -->
+             <constructor-arg ref="mySony"/>
+        
+         </bean>
+    
+    <bean id="mySony" class="org.example.magnitola.Sony"/>
+    <bean id="myPiyoner" class="org.example.magnitola.Piyoner"/>
+
+
+</beans>
