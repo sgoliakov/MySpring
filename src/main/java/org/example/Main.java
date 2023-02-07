@@ -19,5 +19,6 @@ public class Main {
         bmw.move();
         bmw.getMagnitola().play();
 
+        System.out.println("HAha");
     }
 }
