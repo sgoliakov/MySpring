@@ -18,7 +18,6 @@ public class Main {
         BMW bmw = context.getBean(BMW.class);
         bmw.move();
         bmw.getMagnitola().play();
-
-        System.out.println("HAha");
+        System.out.println("test revert");
     }
 }
